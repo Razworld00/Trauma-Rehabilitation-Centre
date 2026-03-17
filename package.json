@@ -1,0 +1,11 @@
+{
+  "name": "trauma-rehab-centre-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Full-stack website for Trauma & Rehabilitation Centre (NPO 257-320)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "MIT"
+}
