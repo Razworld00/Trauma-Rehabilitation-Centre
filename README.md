@@ -36,6 +36,7 @@ This project includes:
 - Admissions form (API connected)
 - Contact form (API connected)
 - Gallery + Blog sections
+- Recent activities section with real TRC clinic and community photos
 - Google Maps embed for Parkside location
 - Dark mode toggle
 
@@ -61,6 +62,11 @@ trauma-rehab-centre-site/
 ├─ prompts/
 │  └─ PHD_PROMPT_CODEX.md     # Advanced prompt for future Codex builds
 ├─ public/
+│  ├─ assets/
+│  │  └─ images/
+│  │     ├─ clinic/           # Real clinic photos
+│  │     ├─ activities/       # Donation + member activity photos
+│  │     └─ wellness/         # Plants wellness poster
 │  └─ index.html              # Frontend
 ├─ .gitignore
 ├─ LICENSE
@@ -109,7 +115,7 @@ http://127.0.0.1:8097
 ## Customization Checklist
 
 - Replace placeholder logo URLs with official logo files from `assets/logos/`.
-- Replace Picsum placeholders with real project media in `assets/images/`.
+- Add finalized approved logo files into `public/assets` and update navbar/footer logo paths.
 - Update blog/gallery content with finalized institution-approved copy.
 - Add proper analytics and SEO metadata for production.
 
