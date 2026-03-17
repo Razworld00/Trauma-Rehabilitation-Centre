@@ -1,0 +1,1189 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trauma & Rehabilitation Centre | Empowering Eastern Cape Communities</title>
+    <meta
+      name="description"
+      content="Trauma & Rehabilitation Centre (NPO 257-320), East London. Academic excellence, social healing, and accredited social health courses."
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <style type="text/tailwindcss">
+      @theme {
+        --color-trc-navy: #003087;
+        --color-trc-green: #00a651;
+        --color-trc-gold: #ffcc00;
+        --color-trc-cream: #fffdf6;
+      }
+    </style>
+
+    <style>
+      :root {
+        --bg: #fffdf6;
+        --surface: #ffffff;
+        --surface-2: #f5f8ff;
+        --text: #1f2937;
+        --muted: #4b5563;
+        --ring: rgba(0, 48, 135, 0.28);
+      }
+
+      html.dark {
+        --bg: #071224;
+        --surface: #0b1c38;
+        --surface-2: #102647;
+        --text: #ecf3ff;
+        --muted: #afbdd7;
+        --ring: rgba(255, 204, 0, 0.35);
+      }
+
+      body {
+        font-family: Inter, system-ui, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+      }
+
+      .font-display {
+        font-family: "Playfair Display", Georgia, serif;
+      }
+
+      .hero-layer {
+        transform: translateY(0);
+        will-change: transform;
+      }
+
+      .hero-gradient {
+        background:
+          radial-gradient(circle at 20% 15%, rgba(255, 204, 0, 0.22), transparent 36%),
+          radial-gradient(circle at 80% 0%, rgba(0, 166, 81, 0.28), transparent 32%),
+          linear-gradient(120deg, rgba(0, 48, 135, 0.9), rgba(0, 166, 81, 0.84));
+      }
+
+      .hero-noise {
+        background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
+        opacity: 0.16;
+      }
+
+      .glass {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(14px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+      }
+
+      .surface {
+        background: var(--surface);
+      }
+
+      .surface-2 {
+        background: var(--surface-2);
+      }
+
+      .muted {
+        color: var(--muted);
+      }
+
+      .soft-ring:focus-visible {
+        outline: 2px solid transparent;
+        box-shadow: 0 0 0 4px var(--ring);
+      }
+
+      .card-pop {
+        transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s;
+      }
+
+      .card-pop:hover {
+        transform: translateY(-8px) scale(1.01);
+        box-shadow: 0 20px 35px -12px rgba(0, 28, 85, 0.28);
+      }
+
+      .masonry {
+        column-count: 1;
+        column-gap: 1rem;
+      }
+
+      @media (min-width: 768px) {
+        .masonry {
+          column-count: 2;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .masonry {
+          column-count: 3;
+        }
+      }
+
+      .masonry > figure {
+        break-inside: avoid;
+        margin-bottom: 1rem;
+      }
+
+      .floating-cta {
+        animation: pulseFloat 2.8s ease-in-out infinite;
+      }
+
+      @keyframes pulseFloat {
+        0%,
+        100% {
+          transform: translateY(0);
+          box-shadow: 0 15px 30px -12px rgba(0, 48, 135, 0.4);
+        }
+        50% {
+          transform: translateY(-5px);
+          box-shadow: 0 25px 45px -12px rgba(0, 48, 135, 0.48);
+        }
+      }
+    </style>
+  </head>
+  <body x-data="siteApp()" x-init="init()" class="antialiased">
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-3 focus:left-3 focus:z-[200] focus:bg-white focus:text-black focus:px-4 focus:py-2 focus:rounded-lg"
+    >
+      Skip to main content
+    </a>
+
+    <header class="sticky top-0 z-50 border-b border-slate-200/60 dark:border-slate-700/40" style="background: var(--surface)">
+      <nav class="mx-auto max-w-7xl px-4 sm:px-6 py-3" aria-label="Main navigation">
+        <div class="flex items-center justify-between gap-4">
+          <a href="#home" class="flex items-center gap-3 soft-ring rounded-xl">
+            <img
+              src="assets/logos/trc-logo-mark-visible.png"
+              alt="Trauma and Rehabilitation Centre official logo with white dove, April 2024 candle, and health icon"
+              class="h-14 w-auto rounded-lg shadow-md"
+            />
+            <div class="hidden sm:block leading-tight">
+              <p class="text-xs font-semibold tracking-[0.22em] text-trc-green">NPO 257-320</p>
+              <p class="text-sm sm:text-base font-bold text-trc-navy">TRAUMA & REHABILITATION CENTRE</p>
+            </div>
+          </a>
+
+          <div class="hidden lg:flex items-center gap-6 text-sm font-semibold">
+            <a href="#home" class="hover:text-trc-gold transition">Home</a>
+            <a href="#about" class="hover:text-trc-gold transition">About</a>
+            <a href="#services" class="hover:text-trc-gold transition">Services</a>
+            <a href="#courses" class="hover:text-trc-gold transition">Courses</a>
+            <a href="#admissions" class="hover:text-trc-gold transition">Admissions</a>
+            <a href="#blog" class="hover:text-trc-gold transition">Blog</a>
+            <a href="#gallery" class="hover:text-trc-gold transition">Gallery</a>
+            <a href="#contact" class="hover:text-trc-gold transition">Contact</a>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <button
+              type="button"
+              @click="toggleDarkMode()"
+              class="soft-ring inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-300/70 dark:border-slate-600/70"
+              :aria-label="darkMode ? 'Switch to light mode' : 'Switch to dark mode'"
+            >
+              <i class="fa-solid" :class="darkMode ? 'fa-sun text-trc-gold' : 'fa-moon text-trc-navy'"></i>
+            </button>
+            <a
+              href="#admissions"
+              class="hidden sm:inline-flex items-center gap-2 rounded-full bg-trc-green text-white px-5 py-2.5 font-bold hover:brightness-110 transition soft-ring"
+            >
+              <i class="fa-solid fa-graduation-cap"></i>
+              ENROL NOW
+            </a>
+            <button
+              type="button"
+              class="lg:hidden soft-ring inline-flex h-10 w-10 items-center justify-center rounded-full border border-slate-300/70 dark:border-slate-600/70 text-trc-navy dark:text-trc-gold"
+              @click="mobileOpen = !mobileOpen"
+              :aria-expanded="mobileOpen.toString()"
+              aria-controls="mobile-menu"
+              aria-label="Toggle mobile menu"
+            >
+              <i class="fa-solid" :class="mobileOpen ? 'fa-xmark' : 'fa-bars'"></i>
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="mobile-menu"
+          x-show="mobileOpen"
+          x-transition.opacity.duration.220ms
+          x-transition.scale.origin.top.duration.220ms
+          class="lg:hidden mt-3 rounded-2xl border border-slate-300/50 dark:border-slate-700/70 p-4 surface"
+        >
+          <div class="grid gap-3 text-sm font-semibold">
+            <a href="#home" @click="mobileOpen=false" class="hover:text-trc-green">Home</a>
+            <a href="#about" @click="mobileOpen=false" class="hover:text-trc-green">About Us</a>
+            <a href="#services" @click="mobileOpen=false" class="hover:text-trc-green">Our Services</a>
+            <a href="#courses" @click="mobileOpen=false" class="hover:text-trc-green">Courses</a>
+            <a href="#admissions" @click="mobileOpen=false" class="hover:text-trc-green">Admissions</a>
+            <a href="#blog" @click="mobileOpen=false" class="hover:text-trc-green">Insights</a>
+            <a href="#gallery" @click="mobileOpen=false" class="hover:text-trc-green">Gallery</a>
+            <a href="#contact" @click="mobileOpen=false" class="hover:text-trc-green">Contact</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <a
+      href="#admissions"
+      class="floating-cta fixed bottom-5 right-5 z-40 inline-flex items-center gap-2 rounded-full bg-trc-gold px-5 py-3 text-sm font-extrabold text-trc-navy shadow-xl soft-ring"
+      aria-label="Jump to admissions section"
+    >
+      <i class="fa-solid fa-circle-chevron-right"></i>
+      ENROL NOW
+    </a>
+
+    <main id="main-content">
+      <section id="home" class="relative isolate min-h-[100svh] overflow-hidden text-white">
+        <div class="hero-layer absolute inset-0 hero-gradient" id="heroParallax" aria-hidden="true"></div>
+        <div class="absolute inset-0 hero-noise" aria-hidden="true"></div>
+        <div class="absolute inset-0">
+          <img
+            src="https://picsum.photos/id/1015/2200/1400"
+            alt=""
+            class="h-full w-full object-cover mix-blend-overlay opacity-35"
+            aria-hidden="true"
+          />
+        </div>
+        <div class="relative mx-auto max-w-7xl px-5 sm:px-6 pt-20 pb-16 md:pt-28 md:pb-20">
+          <div class="max-w-4xl" data-aos="fade-up">
+            <span class="inline-flex items-center gap-2 rounded-full glass px-4 py-2 text-xs font-bold tracking-[0.2em]">
+              NPO 257-320
+              <span class="text-trc-gold">EAST LONDON</span>
+            </span>
+            <h1 class="mt-6 font-display text-4xl sm:text-5xl md:text-7xl leading-[0.95] font-bold tracking-tight">
+              Empowering Lives Through Education
+              <span class="text-trc-gold">&amp;</span>
+              Social Healing
+            </h1>
+            <p class="mt-6 max-w-3xl text-base sm:text-lg md:text-2xl text-slate-50/95">
+              Vision: A brighter, healthier future for all.
+              Mission: Transformative education that builds compassionate professionals.
+            </p>
+            <div class="mt-10 flex flex-wrap gap-4">
+              <a
+                href="#courses"
+                class="soft-ring inline-flex items-center gap-3 rounded-2xl bg-white px-6 py-4 text-sm sm:text-base font-extrabold text-trc-navy hover:bg-trc-gold transition"
+              >
+                EXPLORE COURSES
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a
+                href="#contact"
+                class="soft-ring inline-flex items-center gap-3 rounded-2xl border-2 border-white/70 px-6 py-4 text-sm sm:text-base font-extrabold hover:bg-white hover:text-trc-navy transition"
+              >
+                GET IN TOUCH
+              </a>
+            </div>
+          </div>
+          <div class="mt-14 max-w-xl" data-aos="fade-up" data-aos-delay="150">
+            <div class="glass rounded-3xl p-5">
+              <p class="text-xs tracking-[0.22em] text-trc-gold font-bold">EST. APRIL 2024</p>
+              <p class="mt-3 text-sm sm:text-base text-slate-100">
+                We are a registered NPO dedicated to academic excellence and social healing in the Eastern Cape.
+              </p>
+              <div class="mt-4 flex items-center gap-3">
+                <i class="fa-solid fa-dove text-2xl text-trc-gold" aria-hidden="true"></i>
+                <p class="text-xs sm:text-sm">Kosmos Street, Parkside, 5201 • 079 472 2248</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-trc-navy py-8 text-white">
+        <div class="mx-auto max-w-7xl px-5 sm:px-6">
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            <article class="rounded-2xl bg-white/8 p-4 text-center">
+              <p class="text-2xl sm:text-3xl font-extrabold text-trc-gold stat-number" data-count="7">0</p>
+              <p class="text-xs sm:text-sm mt-1">Accredited Courses</p>
+            </article>
+            <article class="rounded-2xl bg-white/8 p-4 text-center">
+              <p class="text-2xl sm:text-3xl font-extrabold text-trc-gold stat-number" data-count="1200">0</p>
+              <p class="text-xs sm:text-sm mt-1">Learners Supported</p>
+            </article>
+            <article class="rounded-2xl bg-white/8 p-4 text-center">
+              <p class="text-2xl sm:text-3xl font-extrabold text-trc-gold stat-number" data-count="24">0</p>
+              <p class="text-xs sm:text-sm mt-1">Community Projects</p>
+            </article>
+            <article class="rounded-2xl bg-white/8 p-4 text-center">
+              <p class="text-2xl sm:text-3xl font-extrabold text-trc-gold stat-number" data-count="95">0</p>
+              <p class="text-xs sm:text-sm mt-1">Pass Rate Target (%)</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-16 sm:py-20 bg-trc-navy text-white">
+        <div class="mx-auto max-w-7xl px-5 sm:px-6">
+          <div class="grid md:grid-cols-3 gap-6">
+            <article class="rounded-3xl bg-white/8 p-6 text-center card-pop" data-aos="fade-up">
+              <p class="text-trc-gold text-4xl"><i class="fa-solid fa-eye"></i></p>
+              <h2 class="mt-4 text-2xl font-extrabold">OUR VISION</h2>
+              <p class="mt-3 text-sm sm:text-base text-slate-100/95">
+                Empowering individuals through education, professional training, and community impact, fostering a brighter, healthier future for all.
+              </p>
+            </article>
+            <article class="rounded-3xl bg-white/8 p-6 text-center card-pop" data-aos="fade-up" data-aos-delay="120">
+              <p class="text-trc-gold text-4xl"><i class="fa-solid fa-bullseye"></i></p>
+              <h2 class="mt-4 text-2xl font-extrabold">OUR MISSION</h2>
+              <p class="mt-3 text-sm sm:text-base text-slate-100/95">
+                To provide transformative educational programs, professional training, and social health-focused courses, nurturing academic excellence, personal growth, and compassionate professionals.
+              </p>
+            </article>
+            <article class="rounded-3xl bg-white/8 p-6 text-center card-pop" data-aos="fade-up" data-aos-delay="220">
+              <p class="text-trc-gold text-4xl"><i class="fa-solid fa-heart"></i></p>
+              <h2 class="mt-4 text-2xl font-extrabold">OUR VALUES</h2>
+              <div class="mt-4 grid grid-cols-2 gap-3 text-xs sm:text-sm">
+                <span class="rounded-xl bg-white/10 px-2 py-3">EXCELLENCE &amp; INTEGRITY</span>
+                <span class="rounded-xl bg-white/10 px-2 py-3">COMPASSION</span>
+                <span class="rounded-xl bg-white/10 px-2 py-3">INCLUSIVITY</span>
+                <span class="rounded-xl bg-white/10 px-2 py-3">INNOVATION</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="py-20 sm:py-24">
+        <div class="mx-auto max-w-7xl px-5 sm:px-6">
+          <div class="grid lg:grid-cols-12 gap-10 items-center">
+            <div class="lg:col-span-7" data-aos="fade-right">
+              <p class="text-xs sm:text-sm font-extrabold tracking-[0.2em] text-trc-green">
+                EST. APRIL 2024 • PARKSIDE, EAST LONDON
+              </p>
+              <h2 class="font-display text-3xl sm:text-5xl mt-4 font-bold leading-tight">
+                Trauma &amp; Rehabilitation Centre is more than a school.
+              </h2>
+              <div class="mt-6 space-y-4 text-sm sm:text-lg muted">
+                <p>
+                  We are a registered NPO (257-320) dedicated to academic excellence and social healing in the Eastern Cape.
+                  From matric rewrites to Level 5 Social Auxiliary Work, we equip individuals with the skills and empathy to rebuild lives and communities.
+                </p>
+                <p>
+                  Our holistic approach reflects our unwavering commitment to fostering academic excellence, personal growth, and societal impact, exactly as outlined in our official profile.
+                </p>
+              </div>
+              <div class="mt-10 grid sm:grid-cols-2 gap-8">
+                <div class="rounded-2xl surface p-5 border border-slate-200/60 dark:border-slate-700/60">
+                  <h3 class="font-extrabold text-trc-navy dark:text-trc-gold">GOALS</h3>
+                  <ul class="mt-4 space-y-3 text-sm muted">
+                    <li class="flex gap-3"><i class="fa-solid fa-circle-check text-trc-green mt-0.5"></i>Empower students through comprehensive programs</li>
+                    <li class="flex gap-3"><i class="fa-solid fa-circle-check text-trc-green mt-0.5"></i>Produce graduates with empathy &amp; social impact skills</li>
+                    <li class="flex gap-3"><i class="fa-solid fa-circle-check text-trc-green mt-0.5"></i>Expand offerings to meet evolving community needs</li>
+                    <li class="flex gap-3"><i class="fa-solid fa-circle-check text-trc-green mt-0.5"></i>Foster an inclusive, supportive environment</li>
+                  </ul>
+                </div>
+                <div class="rounded-2xl surface p-5 border border-slate-200/60 dark:border-slate-700/60">
+                  <h3 class="font-extrabold text-trc-navy dark:text-trc-gold">KEY OBJECTIVES</h3>
+                  <ol class="mt-4 space-y-3 text-sm muted list-decimal pl-5">
+                    <li>Deliver extra classes, matric rewrites &amp; upgrades</li>
+                    <li>Train skilled professionals in Social Health fields</li>
+                    <li>Create critical thinkers with social responsibility</li>
+                    <li>Build strategic partnerships for real-world impact</li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+            <aside class="lg:col-span-5" data-aos="fade-left">
+              <div class="surface rounded-3xl border border-slate-200/60 dark:border-slate-700/60 p-5 shadow-xl">
+                <img
+                  src="https://picsum.photos/id/1011/900/700"
+                  alt="Students in an Eastern Cape classroom"
+                  class="w-full rounded-2xl object-cover"
+                />
+                <div class="mt-6 flex gap-3">
+                  <div class="h-12 w-12 rounded-2xl bg-trc-green text-white flex items-center justify-center">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
+                  <div>
+                    <p class="font-bold text-trc-navy dark:text-trc-gold">Kosmos Street, Parkside, 5201</p>
+                    <p class="text-sm muted">079 472 2248 • matinithembile7@gmail.com</p>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="py-20 sm:py-24 surface-2">
+        <div class="mx-auto max-w-7xl px-5 sm:px-6">
+          <div class="text-center max-w-3xl mx-auto" data-aos="fade-up">
+            <span class="inline-block rounded-full bg-trc-gold px-4 py-2 text-xs font-extrabold text-trc-navy">
+              OUR CORE SERVICES
+            </span>
+            <h2 class="font-display text-3xl sm:text-5xl font-bold mt-5">Academic Excellence &amp; Social Health Training</h2>
+          </div>
+
+          <div class="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <article class="card-pop rounded-3xl surface p-6 border border-slate-200/60 dark:border-slate-700/60" data-aos="zoom-in">
+              <div class="h-14 w-14 rounded-2xl bg-trc-navy text-white flex items-center justify-center text-2xl">
+                <i class="fa-solid fa-book-open-reader"></i>
+              </div>
+              <h3 class="text-2xl font-bold mt-5">Extra Classes</h3>
+              <p class="mt-3 muted text-sm">Tailored support to help students reach their full academic potential in a compassionate, inclusive environment.</p>
+            </article>
+            <article class="card-pop rounded-3xl surface p-6 border border-slate-200/60 dark:border-slate-700/60" data-aos="zoom-in" data-aos-delay="90">
+              <div class="h-14 w-14 rounded-2xl bg-trc-green text-white flex items-center justify-center text-2xl">
+                <i class="fa-solid fa-rotate"></i>
+              </div>
+              <h3 class="text-2xl font-bold mt-5">Matric Re-Writes</h3>
+              <p class="mt-3 muted text-sm">Comprehensive programs with resources and mentorship to successfully retake and pass matric examinations.</p>
+            </article>
+            <article class="card-pop rounded-3xl surface p-6 border border-slate-200/60 dark:border-slate-700/60" data-aos="zoom-in" data-aos-delay="180">
+              <div class="h-14 w-14 rounded-2xl bg-trc-gold text-trc-navy flex items-center justify-center text-2xl">
+                <i class="fa-solid fa-arrow-up-right-dots"></i>
+              </div>
+              <h3 class="text-2xl font-bold mt-5">Matric Upgrades</h3>
+              <p class="mt-3 muted text-sm">Specialised courses to improve results and unlock access to tertiary education and better career paths.</p>
+            </article>
+          </div>
+
+          <div class="mt-14">
+            <h3 class="text-2xl sm:text-3xl font-extrabold text-center">Social Health &amp; Professional Courses</h3>
+            <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-5 text-sm">
+              <article class="rounded-3xl bg-gradient-to-br from-trc-navy to-trc-green text-white p-6 card-pop">
+                <p class="inline-block rounded-full bg-white/20 px-3 py-1 text-xs font-bold">LEVEL 5</p>
+                <h4 class="mt-4 text-xl font-extrabold">Social Auxiliary Work</h4>
+                <p class="mt-2 text-slate-100/90">Equipping individuals with skills for social welfare and community support settings.</p>
+              </article>
+              <article class="rounded-3xl surface border border-slate-200/60 dark:border-slate-700/60 p-6 card-pop">
+                <p class="inline-block rounded-full bg-trc-green/15 text-trc-green px-3 py-1 text-xs font-bold">LEVEL 5</p>
+                <h4 class="mt-4 text-xl font-extrabold">Child &amp; Youth Care Worker</h4>
+                <p class="mt-2 muted">Nurturing care, guidance and support for children and youth in need.</p>
+              </article>
+              <article class="rounded-3xl surface border border-slate-200/60 dark:border-slate-700/60 p-6 card-pop">
+                <p class="inline-block rounded-full bg-trc-gold/20 text-trc-navy dark:text-trc-gold px-3 py-1 text-xs font-bold">LEVEL 3</p>
+                <h4 class="mt-4 text-xl font-extrabold">Health Promotion Officer</h4>
+                <p class="mt-2 muted">Advocating for public health awareness and community well-being.</p>
+              </article>
+              <article class="rounded-3xl surface border border-slate-200/60 dark:border-slate-700/60 p-6 card-pop">Early Childhood Development (Level 5)</article>
+              <article class="rounded-3xl surface border border-slate-200/60 dark:border-slate-700/60 p-6 card-pop">Community Development (Level 5)</article>
+              <article class="rounded-3xl surface border border-slate-200/60 dark:border-slate-700/60 p-6 card-pop">Social Counselling Worker (Level 5)</article>
+              <article class="rounded-3xl surface border border-slate-200/60 dark:border-slate-700/60 p-6 card-pop">Occupational Health &amp; Safety (Level 5)</article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="courses" class="py-20 sm:py-24 bg-slate-950 text-white">
+        <div class="mx-auto max-w-7xl px-5 sm:px-6">
+          <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+            <div>
+              <p class="text-trc-gold font-bold tracking-[0.2em] text-xs">LEVEL 3-5 QUALIFICATIONS</p>
+              <h2 class="font-display text-3xl sm:text-5xl font-bold mt-3">Our Accredited Courses</h2>
+            </div>
+            <div class="w-full lg:max-w-sm">
+              <label for="courseSearch" class="sr-only">Search courses</label>
+              <div class="relative">
+                <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-300"></i>
+                <input
+                  id="courseSearch"
+                  type="search"
+                  x-model="courseSearch"
+                  placeholder="Search courses, level, outcomes..."
+                  class="soft-ring w-full rounded-2xl border border-white/20 bg-white/10 px-12 py-3 text-sm placeholder:text-slate-300 focus:border-trc-gold"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-10 grid lg:grid-cols-2 gap-5">
+            <template x-for="course in filteredCourses()" :key="course.id">
+              <article class="rounded-3xl border border-white/15 bg-white/5 p-5">
+                <button
+                  type="button"
+                  class="w-full text-left"
+                  @click="toggleCourse(course.id)"
+                  :aria-expanded="(openCourse === course.id).toString()"
+                  :aria-controls="'course-details-' + course.id"
+                >
+                  <div class="flex flex-wrap items-start justify-between gap-3">
+                    <div>
+                      <p class="inline-block rounded-full bg-trc-gold/20 px-3 py-1 text-xs font-bold text-trc-gold" x-text="course.level"></p>
+                      <h3 class="mt-3 text-xl font-extrabold" x-text="course.name"></h3>
+                      <p class="mt-2 text-sm text-slate-200/85" x-text="course.summary"></p>
+                    </div>
+                    <i class="fa-solid fa-chevron-down mt-2 transition-transform" :class="openCourse === course.id ? 'rotate-180 text-trc-gold' : ''"></i>
+                  </div>
+                </button>
+                <div
+                  :id="'course-details-' + course.id"
+                  x-show="openCourse === course.id"
+                  x-transition.opacity.duration.220ms
+                  x-transition.scale.origin.top.duration.220ms
+                  class="pt-4"
+                >
+                  <p class="text-xs uppercase tracking-[0.16em] text-trc-gold font-bold">Curriculum Snapshot</p>
+                  <ul class="mt-3 space-y-2 text-sm text-slate-200/90">
+                    <template x-for="item in course.curriculum" :key="item">
+                      <li class="flex gap-2">
+                        <i class="fa-solid fa-check text-trc-green mt-1"></i>
+                        <span x-text="item"></span>
+                      </li>
+                    </template>
+                  </ul>
+                  <p class="mt-4 rounded-xl bg-white/10 px-3 py-2 text-xs text-slate-100" x-text="'Career pathways: ' + course.career"></p>
+                </div>
+              </article>
+            </template>
+          </div>
+
+          <p
+            x-show="filteredCourses().length === 0"
+            class="mt-8 rounded-xl border border-trc-gold/30 bg-trc-gold/10 p-4 text-sm text-trc-gold"
+          >
+            No courses matched your search. Try keywords like "health", "level 5", or "community".
+          </p>
+        </div>
+      </section>
+
+      <section class="py-20 sm:py-24">
+        <div class="mx-auto max-w-7xl px-5 sm:px-6">
+          <div class="grid lg:grid-cols-12 gap-8 items-center">
+            <div class="lg:col-span-5" data-aos="fade-right">
+              <p class="text-trc-green text-xs font-extrabold tracking-[0.18em]">EASTERN CAPE SUCCESS STORIES</p>
+              <h2 class="font-display text-3xl sm:text-5xl font-bold mt-3">Testimonials & Community Impact</h2>
+              <p class="mt-5 muted text-sm sm:text-base">
+                Real learner journeys from East London communities, reflecting resilience, dignity, and practical transformation.
+              </p>
+            </div>
+            <div class="lg:col-span-7">
+              <article class="rounded-3xl surface border border-slate-200/60 dark:border-slate-700/60 p-6 shadow-xl relative overflow-hidden">
+                <div class="absolute -right-2 -top-4 text-[4rem] text-trc-gold/30" aria-hidden="true">“</div>
+                <p class="text-base sm:text-lg font-semibold leading-relaxed" x-text="testimonials[testimonialIndex].quote"></p>
+                <p class="mt-4 text-sm font-bold text-trc-navy dark:text-trc-gold" x-text="testimonials[testimonialIndex].name"></p>
+                <p class="text-xs muted" x-text="testimonials[testimonialIndex].meta"></p>
+                <div class="mt-5 flex items-center justify-between">
+                  <div class="flex items-center gap-2">
+                    <template x-for="(t, idx) in testimonials" :key="t.name">
+                      <button
+                        type="button"
+                        class="h-2.5 w-2.5 rounded-full"
+                        :class="testimonialIndex === idx ? 'bg-trc-gold' : 'bg-slate-300 dark:bg-slate-600'"
+                        @click="testimonialIndex = idx"
+                        :aria-label="'Go to testimonial ' + (idx + 1)"
+                      ></button>
+                    </template>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <button type="button" class="soft-ring h-9 w-9 rounded-full border border-slate-300 dark:border-slate-600" @click="prevTestimonial()" aria-label="Previous testimonial">
+                      <i class="fa-solid fa-arrow-left"></i>
+                    </button>
+                    <button type="button" class="soft-ring h-9 w-9 rounded-full border border-slate-300 dark:border-slate-600" @click="nextTestimonial()" aria-label="Next testimonial">
+                      <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="admissions" class="py-20 sm:py-24 bg-trc-green text-white">
+        <div class="mx-auto max-w-7xl px-5 sm:px-6">
+          <div class="grid lg:grid-cols-12 gap-8">
+            <div class="lg:col-span-5" data-aos="fade-right">
+              <p class="text-xs tracking-[0.2em] font-extrabold text-trc-gold">ADMISSIONS OPEN</p>
+              <h2 class="font-display text-3xl sm:text-5xl font-bold mt-3">Start Your Transformation Journey</h2>
+              <p class="mt-5 text-slate-50/95">
+                Apply now for social health qualifications, matric support, and community development pathways.
+              </p>
+              <ul class="mt-6 space-y-3 text-sm text-slate-50/95">
+                <li class="flex gap-2"><i class="fa-solid fa-check text-trc-gold mt-0.5"></i>Level 3 to Level 5 programmes</li>
+                <li class="flex gap-2"><i class="fa-solid fa-check text-trc-gold mt-0.5"></i>Supportive mentorship and career readiness</li>
+                <li class="flex gap-2"><i class="fa-solid fa-check text-trc-gold mt-0.5"></i>Community impact and practical field exposure</li>
+              </ul>
+            </div>
+
+            <div class="lg:col-span-7">
+              <form
+                id="admissionForm"
+                @submit.prevent="submitAdmission($event)"
+                class="rounded-3xl bg-white/10 backdrop-blur-sm border border-white/25 p-5 sm:p-7"
+                novalidate
+              >
+                <div class="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <label for="admissionName" class="text-sm font-semibold">Full Name</label>
+                    <input id="admissionName" name="name" required minlength="2" class="soft-ring mt-1 w-full rounded-xl border border-white/30 bg-white/15 px-4 py-3 placeholder:text-slate-200" placeholder="Your full name" />
+                  </div>
+                  <div>
+                    <label for="admissionEmail" class="text-sm font-semibold">Email</label>
+                    <input id="admissionEmail" name="email" type="email" required class="soft-ring mt-1 w-full rounded-xl border border-white/30 bg-white/15 px-4 py-3 placeholder:text-slate-200" placeholder="name@email.com" />
+                  </div>
+                  <div>
+                    <label for="admissionPhone" class="text-sm font-semibold">Phone Number</label>
+                    <input id="admissionPhone" name="phone" required class="soft-ring mt-1 w-full rounded-xl border border-white/30 bg-white/15 px-4 py-3 placeholder:text-slate-200" placeholder="+27..." />
+                  </div>
+                  <div>
+                    <label for="admissionEducation" class="text-sm font-semibold">Highest Education</label>
+                    <select id="admissionEducation" name="educationLevel" required class="soft-ring mt-1 w-full rounded-xl border border-white/30 bg-white/15 px-4 py-3">
+                      <option value="" class="text-slate-900">Select one</option>
+                      <option value="Grade 10" class="text-slate-900">Grade 10</option>
+                      <option value="Grade 11" class="text-slate-900">Grade 11</option>
+                      <option value="Matric" class="text-slate-900">Matric</option>
+                      <option value="Post-school qualification" class="text-slate-900">Post-school qualification</option>
+                    </select>
+                  </div>
+                  <div class="sm:col-span-2">
+                    <label for="admissionCourse" class="text-sm font-semibold">Course Interest</label>
+                    <select id="admissionCourse" name="course" required class="soft-ring mt-1 w-full rounded-xl border border-white/30 bg-white/15 px-4 py-3">
+                      <option value="" class="text-slate-900">Select a programme</option>
+                      <template x-for="course in courses" :key="'admission-' + course.id">
+                        <option :value="course.name" x-text="course.name" class="text-slate-900"></option>
+                      </template>
+                    </select>
+                  </div>
+                  <div class="sm:col-span-2">
+                    <label for="admissionMessage" class="text-sm font-semibold">Tell us about your goals</label>
+                    <textarea id="admissionMessage" name="message" required minlength="10" rows="4" class="soft-ring mt-1 w-full rounded-xl border border-white/30 bg-white/15 px-4 py-3 placeholder:text-slate-200" placeholder="How can we support your learning journey?"></textarea>
+                  </div>
+                </div>
+                <div class="mt-5 flex flex-wrap items-center gap-4">
+                  <button
+                    type="submit"
+                    class="soft-ring inline-flex items-center gap-2 rounded-xl bg-trc-gold px-6 py-3 font-extrabold text-trc-navy hover:brightness-95 transition disabled:opacity-70"
+                    :disabled="admissionLoading"
+                  >
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span x-text="admissionLoading ? 'Submitting...' : 'Submit Application'"></span>
+                  </button>
+                  <p class="text-sm" aria-live="polite" x-text="admissionStatus.message" :class="admissionStatus.ok ? 'text-yellow-200' : 'text-red-200'"></p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="blog" class="py-20 sm:py-24">
+        <div class="mx-auto max-w-7xl px-5 sm:px-6">
+          <div class="text-center max-w-4xl mx-auto">
+            <p class="text-xs font-extrabold tracking-[0.2em] text-trc-green">RECENT ACTIVITIES</p>
+            <h2 class="font-display text-3xl sm:text-5xl font-bold mt-3">Community Impact Updates</h2>
+            <p class="mt-4 muted text-sm sm:text-base">
+              Real events and milestones from Trauma and Rehabilitation Centre outreach and member development programmes.
+            </p>
+          </div>
+          <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <article class="rounded-3xl surface border border-slate-200/60 dark:border-slate-700/60 overflow-hidden card-pop">
+              <img src="assets/images/activities/wheelchair-donation-1.jpg" alt="Wheelchair donation handover event with Ms Beverly Bantom" class="h-56 w-full object-cover" />
+              <div class="p-5">
+                <p class="text-xs font-bold text-trc-green">DONATION STORY</p>
+                <h3 class="mt-2 text-xl font-bold">Wheelchair Support for Stroke Survivor</h3>
+                <p class="mt-2 text-sm muted">
+                  The Trauma and Rehabilitation Centre NPO received the donation of a wheelchair from Ms Beverly Bantom to help a woman who was attacked by stroke last month.
+                </p>
+                <p class="mt-2 text-sm muted">We appreciate and thank our sister in Christ for this compassionate support.</p>
+              </div>
+            </article>
+            <article class="rounded-3xl surface border border-slate-200/60 dark:border-slate-700/60 overflow-hidden card-pop">
+              <img src="assets/images/activities/members-meeting-indoor.jpg" alt="TRC members attending an indoor orientation meeting" class="h-56 w-full object-cover" />
+              <div class="p-5">
+                <p class="text-xs font-bold text-trc-green">MEMBER DEVELOPMENT</p>
+                <h3 class="mt-2 text-xl font-bold">New Members Introduction Meeting</h3>
+                <p class="mt-2 text-sm muted">
+                  TRC members held a meeting yesterday to introduce new members to the organisation, and the newly registered members enjoyed the event.
+                </p>
+                <p class="mt-2 text-sm muted">
+                  We say thank you to the organisers of the event and to the Gwes family for everything they have done for us.
+                </p>
+              </div>
+            </article>
+            <article class="rounded-3xl surface border border-slate-200/60 dark:border-slate-700/60 overflow-hidden card-pop">
+              <img src="assets/images/wellness/plants-matter-guide.jpg" alt="Plants matter guide showing air-purifying plants for healthy homes and offices" class="h-56 w-full object-cover" />
+              <div class="p-5">
+                <p class="text-xs font-bold text-trc-green">WELLNESS TIP</p>
+                <h3 class="mt-2 text-xl font-bold">Plants Matter: Cleaner Air & Detoxification</h3>
+                <p class="mt-2 text-sm muted">
+                  Spider plants produce oxygen while helping purify air by absorbing carbon monoxide, formaldehyde, and xylene.
+                </p>
+                <div class="mt-3 space-y-2 text-xs muted">
+                  <p><strong>Best bedroom houseplants:</strong> Lavender, Aloe Vera, Jasmine, Snake Plant, English Ivy.</p>
+                  <p><strong>Bathroom plants:</strong> Bamboo, Bromeliads, Cyclamen, Aloe, Dumb Cane, Snake Plant, Spider Plants, Orchid.</p>
+                  <p><strong>Air purification picks:</strong> Snake Plant, Red-Edged Dracaena, Boston Fern, Weeping Fig, Rubber Plant, Peace Lily, Spider Plant, Bamboo Palm.</p>
+                  <p>Plants cleanse and detox the air in our homes and provide a grounding electromagnetic effect for best health.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-20 sm:py-24 surface-2">
+        <div class="mx-auto max-w-7xl px-5 sm:px-6">
+          <div class="text-center max-w-3xl mx-auto">
+            <p class="text-xs font-extrabold tracking-[0.2em] text-trc-green">TRC CLINIC</p>
+            <h2 class="font-display text-3xl sm:text-5xl font-bold mt-3">Clinic Care Space</h2>
+            <p class="mt-4 muted text-sm sm:text-base">
+              The Trauma and Rehabilitation Centre clinic setup used for patient support, recovery care, and basic health monitoring.
+            </p>
+          </div>
+          <div class="mt-10 grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+            <figure class="overflow-hidden rounded-2xl border border-slate-200/60 dark:border-slate-700/60">
+              <img src="assets/images/clinic/clinic-bed-close.jpg" alt="Clinic bed space at the Trauma and Rehabilitation Centre" class="h-72 w-full object-cover transition hover:scale-105 duration-500" />
+            </figure>
+            <figure class="overflow-hidden rounded-2xl border border-slate-200/60 dark:border-slate-700/60">
+              <img src="assets/images/clinic/clinic-bed-room.jpg" alt="Inside view of the rehabilitation clinic room" class="h-72 w-full object-cover transition hover:scale-105 duration-500" />
+            </figure>
+            <figure class="overflow-hidden rounded-2xl border border-slate-200/60 dark:border-slate-700/60">
+              <img src="assets/images/clinic/clinic-medical-equipment.jpg" alt="Clinic monitoring equipment and mobility aids" class="h-72 w-full object-cover transition hover:scale-105 duration-500" />
+            </figure>
+            <figure class="overflow-hidden rounded-2xl border border-slate-200/60 dark:border-slate-700/60">
+              <img src="assets/images/clinic/clinic-support-corner.jpg" alt="Clinic support corner with files and patient comfort items" class="h-72 w-full object-cover transition hover:scale-105 duration-500" />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" class="py-20 sm:py-24">
+        <div class="mx-auto max-w-7xl px-5 sm:px-6">
+          <div class="text-center max-w-3xl mx-auto">
+            <p class="text-xs font-extrabold tracking-[0.2em] text-trc-green">GALLERY</p>
+            <h2 class="font-display text-3xl sm:text-5xl font-bold mt-3">TRC Community Activities</h2>
+          </div>
+          <div class="masonry mt-10">
+            <figure class="overflow-hidden rounded-2xl">
+              <img src="assets/images/activities/wheelchair-donation-1.jpg" alt="Wheelchair donation handover by Ms Beverly Bantom to support stroke recovery" class="w-full transition hover:scale-105 duration-500" />
+            </figure>
+            <figure class="overflow-hidden rounded-2xl">
+              <img src="assets/images/activities/wheelchair-donation-2.jpg" alt="Second view of wheelchair donation handover event" class="w-full transition hover:scale-105 duration-500" />
+            </figure>
+            <figure class="overflow-hidden rounded-2xl">
+              <img src="assets/images/activities/members-group-1.jpg" alt="TRC members and community participants group photo outside venue" class="w-full transition hover:scale-105 duration-500" />
+            </figure>
+            <figure class="overflow-hidden rounded-2xl">
+              <img src="assets/images/activities/members-meeting-indoor.jpg" alt="TRC members during indoor meeting and introduction session" class="w-full transition hover:scale-105 duration-500" />
+            </figure>
+            <figure class="overflow-hidden rounded-2xl">
+              <img src="assets/images/activities/members-group-2.jpg" alt="Community members and new TRC members gathered for registration event" class="w-full transition hover:scale-105 duration-500" />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="py-20 sm:py-24">
+        <div class="mx-auto max-w-7xl px-5 sm:px-6">
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="rounded-3xl surface border border-slate-200/60 dark:border-slate-700/60 p-6 sm:p-7">
+              <p class="text-xs font-extrabold tracking-[0.2em] text-trc-green">CONTACT US</p>
+              <h2 class="font-display text-3xl sm:text-4xl font-bold mt-3">Let’s Build a Healthier Future Together</h2>
+              <p class="mt-4 muted text-sm sm:text-base">
+                For official course details, fees, or accreditation, please contact the centre directly.
+              </p>
+              <div class="mt-6 space-y-2 text-sm">
+                <p><strong>Address:</strong> Kosmos Street, Parkside, 5201, East London, Eastern Cape</p>
+                <p><strong>Community Outreach Address:</strong> Nxamukwana Village, Post Dam, BCMM Ward 24, Mdantsane, East London, Eastern Cape, 5219</p>
+                <p><strong>Phone:</strong> 079 472 2248</p>
+                <p><strong>Email:</strong> matinithembile7@gmail.com</p>
+                <p><strong>NPO Registration:</strong> 257-320</p>
+              </div>
+
+              <form id="contactForm" @submit.prevent="submitContact($event)" class="mt-6 space-y-4" novalidate>
+                <div>
+                  <label for="contactName" class="text-sm font-semibold">Name</label>
+                  <input id="contactName" name="name" required minlength="2" class="soft-ring mt-1 w-full rounded-xl border border-slate-300/70 dark:border-slate-600/70 surface px-4 py-3" placeholder="Your name" />
+                </div>
+                <div>
+                  <label for="contactEmail" class="text-sm font-semibold">Email</label>
+                  <input id="contactEmail" name="email" type="email" required class="soft-ring mt-1 w-full rounded-xl border border-slate-300/70 dark:border-slate-600/70 surface px-4 py-3" placeholder="you@example.com" />
+                </div>
+                <div>
+                  <label for="contactPhone" class="text-sm font-semibold">Phone</label>
+                  <input id="contactPhone" name="phone" required class="soft-ring mt-1 w-full rounded-xl border border-slate-300/70 dark:border-slate-600/70 surface px-4 py-3" placeholder="+27..." />
+                </div>
+                <div>
+                  <label for="contactSubject" class="text-sm font-semibold">Subject</label>
+                  <select id="contactSubject" name="subject" class="soft-ring mt-1 w-full rounded-xl border border-slate-300/70 dark:border-slate-600/70 surface px-4 py-3">
+                    <option value="General Enquiry">General Enquiry</option>
+                    <option value="Admissions">Admissions</option>
+                    <option value="Courses">Courses</option>
+                    <option value="Partnership">Partnership</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="contactMessage" class="text-sm font-semibold">Message</label>
+                  <textarea id="contactMessage" name="message" required minlength="10" rows="4" class="soft-ring mt-1 w-full rounded-xl border border-slate-300/70 dark:border-slate-600/70 surface px-4 py-3" placeholder="Write your message..."></textarea>
+                </div>
+                <div class="flex flex-wrap items-center gap-3">
+                  <button
+                    type="submit"
+                    class="soft-ring inline-flex items-center gap-2 rounded-xl bg-trc-navy px-5 py-3 text-white font-extrabold hover:brightness-110 transition disabled:opacity-65"
+                    :disabled="contactLoading"
+                  >
+                    <i class="fa-solid fa-envelope"></i>
+                    <span x-text="contactLoading ? 'Sending...' : 'Send Message'"></span>
+                  </button>
+                  <p class="text-sm" aria-live="polite" x-text="contactStatus.message" :class="contactStatus.ok ? 'text-trc-green' : 'text-red-500'"></p>
+                </div>
+              </form>
+            </div>
+
+            <div class="rounded-3xl overflow-hidden border border-slate-200/60 dark:border-slate-700/60 min-h-[520px]">
+              <iframe
+                title="Google Map for Kosmos Street Parkside 5201 East London"
+                src="https://www.google.com/maps?q=Kosmos+Street,+Parkside,+East+London,+South+Africa&output=embed"
+                class="h-full w-full"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-trc-navy text-white/85 py-14">
+      <div class="mx-auto max-w-7xl px-5 sm:px-6 grid md:grid-cols-12 gap-8">
+        <div class="md:col-span-4">
+          <div class="flex items-center gap-3 mb-4">
+            <img src="assets/logos/trc-logo-mark-visible.png" alt="Trauma and Rehabilitation Centre logo mark" class="h-12 rounded" />
+          </div>
+          <p class="text-sm">Kosmos Street, Parkside, 5201 • East London, Eastern Cape</p>
+          <p class="text-sm mt-1">Nxamukwana Village, Post Dam, BCMM Ward 24 • Mdantsane, East London, 5219</p>
+          <p class="text-sm mt-1">079 472 2248 | matinithembile7@gmail.com</p>
+          <p class="text-xs mt-5">NPO Registration: 257-320</p>
+        </div>
+        <div class="md:col-span-5 text-sm leading-relaxed">
+          © 2026 Trauma and Rehabilitation Centre. All rights reserved.<br />
+          This website provides general information only and does not constitute professional advice.
+          For official course details, fees, or accreditation, please contact the centre directly.
+        </div>
+        <div class="md:col-span-3 md:text-right text-xs">
+          <p class="font-bold text-trc-gold mb-2">DEVELOPED BY</p>
+          <p class="text-white font-semibold">RANET SOLUTIONS</p>
+          <p class="mt-6">Website built with passion for South African NPOs</p>
+          <p class="mt-6 text-[11px]">
+            DISCLAIMER: Ranet Solutions is not liable for any decisions made based on this site. All content is for illustrative and informational purposes.
+          </p>
+        </div>
+      </div>
+      <div class="mx-auto max-w-7xl px-5 sm:px-6 mt-10 border-t border-white/15 pt-6 text-center text-[11px]">
+        Developed by Ranet Solutions • All rights reserved • NPO 257-320
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("alpine:init", () => {
+        Alpine.data("siteApp", () => ({
+          mobileOpen: false,
+          darkMode: false,
+          courseSearch: "",
+          openCourse: null,
+          testimonialIndex: 0,
+          testimonialTimer: null,
+          admissionLoading: false,
+          contactLoading: false,
+          admissionStatus: { ok: false, message: "" },
+          contactStatus: { ok: false, message: "" },
+          apiBase: "",
+          isGitHubPagesHost: false,
+          courses: [
+            {
+              id: "social-auxiliary-work",
+              name: "Social Auxiliary Work",
+              level: "Level 5",
+              summary: "Professional training for social welfare and community support practice.",
+              career: "Social auxiliary worker, family support assistant, community outreach facilitator",
+              curriculum: [
+                "Foundations of social welfare legislation and ethical practice",
+                "Case recording, referral systems, and client documentation",
+                "Community resource mapping and service coordination",
+                "Basic trauma-informed communication and support",
+                "Supervised field placement in social service contexts",
+              ],
+            },
+            {
+              id: "child-youth-care-worker",
+              name: "Child & Youth Care Worker",
+              level: "Level 5",
+              summary: "Nurturing care and structured support for children and youth at risk.",
+              career: "Childcare practitioner, youth programme facilitator, residential care support",
+              curriculum: [
+                "Child development stages and psychosocial needs",
+                "Safeguarding, child protection, and reporting protocols",
+                "Behaviour support strategies in care environments",
+                "Family systems engagement and home-school collaboration",
+                "Practical simulation and supervised placement hours",
+              ],
+            },
+            {
+              id: "health-promotion-officer",
+              name: "Health Promotion Officer",
+              level: "Level 3",
+              summary: "Public health advocacy and prevention campaigns for community well-being.",
+              career: "Health promoter, community mobiliser, wellness campaign coordinator",
+              curriculum: [
+                "Primary health concepts and disease prevention",
+                "Designing local awareness campaigns",
+                "Data collection for community health programmes",
+                "Communication for behaviour change interventions",
+                "Monitoring outreach impact and reporting results",
+              ],
+            },
+            {
+              id: "early-childhood-development",
+              name: "Early Childhood Development",
+              level: "Level 5",
+              summary: "Developmental learning and care foundations for early years settings.",
+              career: "ECD practitioner, preschool support educator, caregiver coordinator",
+              curriculum: [
+                "Early learning frameworks and play-based pedagogy",
+                "Inclusive classroom setup and child-centred planning",
+                "Nutrition, safety, and wellness in ECD environments",
+                "Parent engagement and developmental communication",
+                "Assessment portfolios and reflective teaching practice",
+              ],
+            },
+            {
+              id: "community-development",
+              name: "Community Development",
+              level: "Level 5",
+              summary: "Participatory development methods for sustainable local impact.",
+              career: "Community development facilitator, NGO project assistant, programme officer",
+              curriculum: [
+                "Participatory needs assessment and stakeholder mapping",
+                "Project planning, budgeting, and implementation basics",
+                "Monitoring and evaluation for social projects",
+                "Conflict-sensitive facilitation and local leadership",
+                "Partnership building with public and civil sectors",
+              ],
+            },
+            {
+              id: "social-counselling-worker",
+              name: "Social Counselling Worker",
+              level: "Level 5",
+              summary: "Supportive counselling skills for social and emotional resilience.",
+              career: "Counselling support worker, psychosocial assistant, intake coordinator",
+              curriculum: [
+                "Counselling micro-skills and active listening",
+                "Crisis response and referral boundaries",
+                "Group support facilitation methods",
+                "Confidentiality, ethics, and practitioner wellbeing",
+                "Applied roleplay and supervised support sessions",
+              ],
+            },
+            {
+              id: "occupational-health-safety",
+              name: "Occupational Health & Safety",
+              level: "Level 5",
+              summary: "Workplace risk prevention and compliance-driven safety systems.",
+              career: "Safety officer assistant, compliance monitor, health and safety trainer",
+              curriculum: [
+                "OHS legal framework and compliance fundamentals",
+                "Hazard identification and risk assessment techniques",
+                "Incident reporting and corrective action planning",
+                "Emergency preparedness and workplace drills",
+                "Safety culture leadership and toolbox talks",
+              ],
+            },
+          ],
+          testimonials: [
+            {
+              quote:
+                "After my matric rewrite support programme, I improved my marks and enrolled in Social Auxiliary Work. The staff treated me with dignity and belief.",
+              name: "Luyanda M.",
+              meta: "Former Matric Rewrite Learner • East London",
+            },
+            {
+              quote:
+                "The Child & Youth Care training gave me practical skills I now use daily in my community outreach role. I feel equipped and purposeful.",
+              name: "Nokwanda S.",
+              meta: "Child & Youth Care Graduate • Buffalo City Metro",
+            },
+            {
+              quote:
+                "The centre combines education and healing. It is not only about passing, it is about becoming a professional with compassion.",
+              name: "Siyabonga T.",
+              meta: "Health Promotion Officer Learner • Eastern Cape",
+            },
+          ],
+          init() {
+            this.isGitHubPagesHost = window.location.hostname.endsWith("github.io");
+            this.apiBase = this.isGitHubPagesHost ? "" : "";
+            this.darkMode = localStorage.getItem("trc-dark-mode") === "1";
+            document.documentElement.classList.toggle("dark", this.darkMode);
+            this.startTestimonialLoop();
+
+            AOS.init({
+              once: true,
+              duration: 850,
+              offset: 70,
+              easing: "ease-out-cubic",
+            });
+
+            this.setupParallax();
+            this.setupCounters();
+          },
+          toggleDarkMode() {
+            this.darkMode = !this.darkMode;
+            document.documentElement.classList.toggle("dark", this.darkMode);
+            localStorage.setItem("trc-dark-mode", this.darkMode ? "1" : "0");
+          },
+          filteredCourses() {
+            const q = this.courseSearch.trim().toLowerCase();
+            if (!q) return this.courses;
+            return this.courses.filter((course) => {
+              return (
+                course.name.toLowerCase().includes(q) ||
+                course.level.toLowerCase().includes(q) ||
+                course.summary.toLowerCase().includes(q) ||
+                course.curriculum.some((item) => item.toLowerCase().includes(q))
+              );
+            });
+          },
+          toggleCourse(id) {
+            this.openCourse = this.openCourse === id ? null : id;
+          },
+          startTestimonialLoop() {
+            if (this.testimonialTimer) clearInterval(this.testimonialTimer);
+            this.testimonialTimer = setInterval(() => {
+              this.nextTestimonial();
+            }, 6000);
+          },
+          nextTestimonial() {
+            this.testimonialIndex = (this.testimonialIndex + 1) % this.testimonials.length;
+          },
+          prevTestimonial() {
+            this.testimonialIndex =
+              (this.testimonialIndex - 1 + this.testimonials.length) % this.testimonials.length;
+          },
+          setupParallax() {
+            const hero = document.getElementById("heroParallax");
+            if (!hero) return;
+            window.addEventListener(
+              "scroll",
+              () => {
+                const offset = Math.min(window.scrollY * 0.24, 160);
+                hero.style.transform = `translateY(${offset}px)`;
+              },
+              { passive: true }
+            );
+          },
+          setupCounters() {
+            const numbers = document.querySelectorAll(".stat-number");
+            if (!numbers.length) return;
+
+            const animateValue = (el, end) => {
+              const duration = 1400;
+              const start = 0;
+              const started = performance.now();
+              const step = (now) => {
+                const progress = Math.min((now - started) / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3);
+                el.textContent = Math.floor(start + (end - start) * eased).toLocaleString();
+                if (progress < 1) requestAnimationFrame(step);
+              };
+              requestAnimationFrame(step);
+            };
+
+            const observer = new IntersectionObserver(
+              (entries, obs) => {
+                entries.forEach((entry) => {
+                  if (!entry.isIntersecting) return;
+                  const end = Number(entry.target.dataset.count || 0);
+                  animateValue(entry.target, end);
+                  obs.unobserve(entry.target);
+                });
+              },
+              { threshold: 0.5 }
+            );
+
+            numbers.forEach((el) => observer.observe(el));
+          },
+          async submitAdmission(event) {
+            const form = event.target;
+            const payload = Object.fromEntries(new FormData(form).entries());
+            this.admissionStatus = { ok: false, message: "" };
+            this.admissionLoading = true;
+
+            if (this.isGitHubPagesHost) {
+              this.admissionStatus = {
+                ok: false,
+                message:
+                  "Admissions form is disabled on GitHub Pages demo. Use the LAN/backend version for live submissions.",
+              };
+              this.admissionLoading = false;
+              return;
+            }
+
+            try {
+              const response = await fetch(`${this.apiBase}/api/admissions`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload),
+              });
+              const result = await response.json();
+              if (!response.ok) {
+                throw new Error(result.errors?.join(" ") || result.error || "Unable to submit application.");
+              }
+              this.admissionStatus = { ok: true, message: result.message || "Application submitted successfully." };
+              form.reset();
+            } catch (error) {
+              this.admissionStatus = { ok: false, message: error.message || "An error occurred while submitting." };
+            } finally {
+              this.admissionLoading = false;
+            }
+          },
+          async submitContact(event) {
+            const form = event.target;
+            const payload = Object.fromEntries(new FormData(form).entries());
+            this.contactStatus = { ok: false, message: "" };
+            this.contactLoading = true;
+
+            if (this.isGitHubPagesHost) {
+              this.contactStatus = {
+                ok: false,
+                message:
+                  "Contact form is disabled on GitHub Pages demo. Use the LAN/backend version for live submissions.",
+              };
+              this.contactLoading = false;
+              return;
+            }
+
+            try {
+              const response = await fetch(`${this.apiBase}/api/contact`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload),
+              });
+              const result = await response.json();
+              if (!response.ok) {
+                throw new Error(result.errors?.join(" ") || result.error || "Unable to send message.");
+              }
+              this.contactStatus = { ok: true, message: result.message || "Message sent successfully." };
+              form.reset();
+            } catch (error) {
+              this.contactStatus = { ok: false, message: error.message || "An error occurred while sending." };
+            } finally {
+              this.contactLoading = false;
+            }
+          },
+        }));
+      });
+
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", (event) => {
+          const id = anchor.getAttribute("href");
+          if (!id || id === "#") return;
+          const target = document.querySelector(id);
+          if (!target) return;
+          event.preventDefault();
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      });
+    </script>
+  </body>
+</html>

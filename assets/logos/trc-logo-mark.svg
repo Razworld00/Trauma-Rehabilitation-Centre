@@ -1,0 +1,24 @@
+<svg width="360" height="360" viewBox="0 0 360 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="markRing" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#003087" />
+      <stop offset="55%" stop-color="#00A651" />
+      <stop offset="100%" stop-color="#FFCC00" />
+    </linearGradient>
+    <clipPath id="markClipSmall">
+      <circle cx="180" cy="180" r="133" />
+    </clipPath>
+    <filter id="markShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="#003087" flood-opacity="0.25" />
+    </filter>
+  </defs>
+
+  <g filter="url(#markShadow)">
+    <circle cx="180" cy="180" r="156" fill="url(#markRing)" />
+    <circle cx="180" cy="180" r="138" fill="#FFFFFF" />
+    <g clip-path="url(#markClipSmall)">
+      <image href="trc-logo-official-source.png" x="-16" y="74" width="392" height="218" preserveAspectRatio="xMidYMid slice" />
+    </g>
+    <circle cx="180" cy="180" r="133" fill="none" stroke="#E5F0FF" stroke-width="2" />
+  </g>
+</svg>
