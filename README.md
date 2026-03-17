@@ -93,6 +93,23 @@ npm start
 http://127.0.0.1:8097
 ```
 
+## LAN Access (Other Network Devices)
+
+Run:
+
+```bash
+cd /home/raz/trauma-rehab-centre-site
+npm run start:lan
+```
+
+Then open this URL from phones/laptops on the same Wi-Fi/LAN:
+
+```text
+http://192.168.110.57:8097
+```
+
+If another device cannot connect, allow TCP port `8097` in your firewall.
+
 ## Form Submission Storage
 
 - Submissions are saved to `data/submissions.json`.
