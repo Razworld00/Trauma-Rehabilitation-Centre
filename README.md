@@ -37,6 +37,7 @@ This project includes:
 - Contact form (API connected)
 - Gallery + Blog sections
 - Recent activities section with real TRC clinic and community photos
+- Professional logo assets derived from official profile document
 - Google Maps embed for Parkside location
 - Dark mode toggle
 
@@ -63,10 +64,11 @@ trauma-rehab-centre-site/
 │  └─ PHD_PROMPT_CODEX.md     # Advanced prompt for future Codex builds
 ├─ public/
 │  ├─ assets/
-│  │  └─ images/
-│  │     ├─ clinic/           # Real clinic photos
-│  │     ├─ activities/       # Donation + member activity photos
-│  │     └─ wellness/         # Plants wellness poster
+│  │  ├─ images/
+│  │  │  ├─ clinic/           # Real clinic photos
+│  │  │  ├─ activities/       # Donation + member activity photos
+│  │  │  └─ wellness/         # Plants wellness poster
+│  │  └─ logos/               # Professional logo set + official source crop
 │  └─ index.html              # Frontend
 ├─ .gitignore
 ├─ LICENSE
