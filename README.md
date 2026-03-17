@@ -110,6 +110,22 @@ http://192.168.110.57:8097
 
 If another device cannot connect, allow TCP port `8097` in your firewall.
 
+## GitHub Pages (Live URL)
+
+This repository deploys automatically to GitHub Pages from the `public/` folder using GitHub Actions.
+
+Expected live URL:
+
+```text
+https://razworld00.github.io/Trauma-Rehabilitation-Centre/
+```
+
+Notes:
+
+- GitHub Pages is static hosting only.
+- Admissions/Contact API forms are disabled on the GitHub Pages version.
+- For fully functional forms, use the LAN/backend version (`npm run start:lan`) or deploy the Node backend.
+
 ## Form Submission Storage
 
 - Submissions are saved to `data/submissions.json`.
