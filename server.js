@@ -1,5 +1,6 @@
 const http = require("http");
 const fs = require("fs/promises");
+const fsStream = require("fs");
 const path = require("path");
 const crypto = require("crypto");
 
@@ -21,6 +22,14 @@ const MIME_TYPES = {
   ".jpg": "image/jpeg",
   ".jpeg": "image/jpeg",
   ".webp": "image/webp",
+  ".mp4": "video/mp4",
+  ".m4v": "video/mp4",
+  ".webm": "video/webm",
+  ".mov": "video/quicktime",
+  ".ogv": "video/ogg",
+  ".mp3": "audio/mpeg",
+  ".wav": "audio/wav",
+  ".ogg": "audio/ogg",
   ".ico": "image/x-icon",
 };
 
@@ -175,12 +184,77 @@ async function serveStatic(req, res) {
   }
 
   try {
-    const data = await fs.readFile(filePath);
     const ext = path.extname(filePath).toLowerCase();
     const contentType = MIME_TYPES[ext] || "application/octet-stream";
+    const fileStat = await fs.stat(filePath);
+    const totalSize = fileStat.size;
+    const rangeHeader = req.headers.range;
+
+    if (rangeHeader) {
+      const match = /^bytes=(\d*)-(\d*)$/.exec(rangeHeader);
+      if (!match) {
+        setSecurityHeaders(res);
+        res.writeHead(416, {
+          "Content-Range": `bytes */${totalSize}`,
+        });
+        res.end();
+        return;
+      }
+
+      const [, startRaw, endRaw] = match;
+      let start;
+      let end;
+
+      if (startRaw === "" && endRaw !== "") {
+        const suffixLength = Number(endRaw);
+        if (!Number.isInteger(suffixLength) || suffixLength <= 0) {
+          setSecurityHeaders(res);
+          res.writeHead(416, {
+            "Content-Range": `bytes */${totalSize}`,
+          });
+          res.end();
+          return;
+        }
+        start = Math.max(totalSize - suffixLength, 0);
+        end = totalSize - 1;
+      } else {
+        start = startRaw === "" ? 0 : Number(startRaw);
+        end = endRaw === "" ? totalSize - 1 : Number(endRaw);
+      }
+
+      if (
+        !Number.isInteger(start) ||
+        !Number.isInteger(end) ||
+        start < 0 ||
+        end < start ||
+        end >= totalSize
+      ) {
+        setSecurityHeaders(res);
+        res.writeHead(416, {
+          "Content-Range": `bytes */${totalSize}`,
+        });
+        res.end();
+        return;
+      }
+
+      setSecurityHeaders(res);
+      res.writeHead(206, {
+        "Content-Type": contentType,
+        "Content-Range": `bytes ${start}-${end}/${totalSize}`,
+        "Content-Length": end - start + 1,
+        "Accept-Ranges": "bytes",
+        "Cache-Control": ext === ".html" ? "no-cache" : "public, max-age=86400",
+      });
+      fsStream.createReadStream(filePath, { start, end }).pipe(res);
+      return;
+    }
+
+    const data = await fs.readFile(filePath);
     setSecurityHeaders(res);
     res.writeHead(200, {
       "Content-Type": contentType,
+      "Content-Length": totalSize,
+      "Accept-Ranges": "bytes",
       "Cache-Control": ext === ".html" ? "no-cache" : "public, max-age=86400",
     });
     res.end(data);
