@@ -1,6 +1,19 @@
-# Trauma & Rehabilitation Centre Website
+<p align="center">
+  <img src="assets/logos/logo-2.jpeg" alt="Trauma & Rehabilitation Centre official logo" width="340" />
+</p>
 
-Production-ready full-stack website for **Trauma & Rehabilitation Centre (NPO 257-320)**, East London, Eastern Cape.
+<h1 align="center">Trauma & Rehabilitation Centre Website</h1>
+
+<p align="center">
+  Production-ready full-stack website for <strong>Trauma & Rehabilitation Centre (NPO 257-320)</strong><br />
+  East London, Eastern Cape, South Africa
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/NPO-257--320-003087?style=for-the-badge" alt="NPO 257-320" />
+  <img src="https://img.shields.io/badge/Region-Eastern%20Cape-00A651?style=for-the-badge" alt="Eastern Cape" />
+  <img src="https://img.shields.io/badge/Status-Live%20on%20GitHub%20Pages-FFCC00?style=for-the-badge" alt="Live on GitHub Pages" />
+</p>
 
 ## Overview
 
@@ -54,7 +67,7 @@ This project includes:
 trauma-rehab-centre-site/
 ├─ assets/
 │  ├─ images/                 # Page images (hero, gallery, cards)
-│  ├─ logos/                  # Official logo files
+│  ├─ logos/                  # Official logo files (logo-1, logo-2, variants)
 │  ├─ media/                  # Video/audio/downloadables
 │  └─ README.md               # Asset usage notes
 ├─ data/
