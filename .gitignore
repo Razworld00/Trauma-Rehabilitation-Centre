@@ -9,6 +9,9 @@ pnpm-debug.log*
 # Runtime data
 data/submissions.json
 
+# Local generated quote exports (do not commit)
+Raznet_Solutions_Website_Quote_*.pdf
+
 # OS/editor files
 .DS_Store
 Thumbs.db
