@@ -180,6 +180,7 @@
             <a href="#admissions" class="hover:text-trc-gold transition">Admissions</a>
             <a href="#blog" class="hover:text-trc-gold transition">Blog</a>
             <a href="#gallery" class="hover:text-trc-gold transition">Gallery</a>
+            <a href="#media" class="hover:text-trc-gold transition">Media</a>
             <a href="#contact" class="hover:text-trc-gold transition">Contact</a>
           </div>
 
@@ -227,6 +228,7 @@
             <a href="#admissions" @click="mobileOpen=false" class="hover:text-trc-green">Admissions</a>
             <a href="#blog" @click="mobileOpen=false" class="hover:text-trc-green">Insights</a>
             <a href="#gallery" @click="mobileOpen=false" class="hover:text-trc-green">Gallery</a>
+            <a href="#media" @click="mobileOpen=false" class="hover:text-trc-green">Media</a>
             <a href="#contact" @click="mobileOpen=false" class="hover:text-trc-green">Contact</a>
           </div>
         </div>
@@ -774,6 +776,39 @@
         </div>
       </section>
 
+      <section id="media" class="py-20 sm:py-24 surface-2">
+        <div class="mx-auto max-w-7xl px-5 sm:px-6">
+          <div class="text-center max-w-3xl mx-auto">
+            <p class="text-xs font-extrabold tracking-[0.2em] text-trc-green">MEDIA</p>
+            <h2 class="font-display text-3xl sm:text-5xl font-bold mt-3">TRC Featured Video</h2>
+            <p class="mt-4 muted text-sm sm:text-base">
+              A short highlight from Trauma and Rehabilitation Centre community activity and outreach.
+            </p>
+          </div>
+          <div class="mt-10 rounded-3xl overflow-hidden border border-slate-200/60 dark:border-slate-700/60 shadow-xl bg-black">
+            <video
+              class="w-full h-auto"
+              controls
+              preload="metadata"
+              playsinline
+              aria-label="TRC featured media video"
+            >
+              <source src="assets/media/trc-featured-highlight.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <p class="px-4 py-3 text-xs sm:text-sm text-slate-100 bg-slate-900/90">
+              If playback does not start in your browser, use this direct file link:
+              <a
+                href="assets/media/trc-featured-highlight.mp4"
+                target="_blank"
+                rel="noopener"
+                class="font-semibold underline underline-offset-4"
+              >Open video</a>.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section id="contact" class="py-20 sm:py-24">
         <div class="mx-auto max-w-7xl px-5 sm:px-6">
           <div class="grid md:grid-cols-2 gap-8">
@@ -863,15 +898,15 @@
         </div>
         <div class="md:col-span-3 md:text-right text-xs">
           <p class="font-bold text-trc-gold mb-2">DEVELOPED BY</p>
-          <p class="text-white font-semibold">RANET SOLUTIONS</p>
+          <p class="text-white font-semibold">RAZNET SOLUTIONS</p>
           <p class="mt-6">Website built with passion for South African NPOs</p>
           <p class="mt-6 text-[11px]">
-            DISCLAIMER: Ranet Solutions is not liable for any decisions made based on this site. All content is for illustrative and informational purposes.
+            DISCLAIMER: Raznet Solutions is not liable for any decisions made based on this site. All content is for illustrative and informational purposes.
           </p>
         </div>
       </div>
       <div class="mx-auto max-w-7xl px-5 sm:px-6 mt-10 border-t border-white/15 pt-6 text-center text-[11px]">
-        Developed by Ranet Solutions • All rights reserved • NPO 257-320
+        Developed by Raznet Solutions • All rights reserved • NPO 257-320
       </div>
     </footer>
 
